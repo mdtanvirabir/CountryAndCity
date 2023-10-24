@@ -1,0 +1,14 @@
+<form (ngSubmit)="updateCountry()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="country.name" name="name" required>
+  
+    <label for="iso2">ISO2:</label>
+    <input type="text" id="iso2" [(ngModel)]="country.iso2" name="iso2" required>
+  
+    <label for="iso3">ISO3:</label>
+    <input type="text" id="iso3" [(ngModel)]="country.iso3" name="iso3" required>
+
+  
+    <button type="submit" class="btn btn-sm btn-primary">Update</button>
+  </form>
+  

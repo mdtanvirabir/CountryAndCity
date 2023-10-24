@@ -1,0 +1,36 @@
+<h2>Add New Country</h2>
+<form (submit)="postCountry()">
+  <label>Name:</label>
+  <input type="text" [(ngModel)]="newCountry.name" name="name" required> 
+  <label>ISO2:</label>
+  <input type="text" [(ngModel)]="newCountry.iso2" name="iso2" required> 
+  <label>ISO3:</label>
+  <input type="text" [(ngModel)]="newCountry.iso3" name="iso3" required> 
+  <button type="submit" class="btn btn-sm btn-primary">Add Country</button>
+</form>
+
+<br>
+<h2>Country Details Country</h2>
+   <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>ISO2</th>
+        <th>ISO3</th>
+        <th>Total Cities</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countries">
+        <td>{{ country.id }}</td>
+        <td>{{ country.name }}</td>
+        <td>{{ country.iso2 }}</td>
+        <td>{{ country.iso3 }}</td>
+        <!-- <td>{{ country.totCities }}</td> -->
+        <td><button (click)="editCountry(country)" class="btn btn-sm btn-info">Edit</button>|<button (click)="deleteCountry(country.id)" class="btn btn-sm btn-danger">Delete</button> </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  

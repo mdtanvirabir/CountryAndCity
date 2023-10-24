@@ -1,0 +1,19 @@
+<nav>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/login" routerLinkActive="active">Login</a>
+    </li>   
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/display" routerLinkActive="active">Display Country </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/displaycity" routerLinkActive="active">Display City </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="logout()" style="cursor:pointer">Logout</a>
+    </li>
+  </ul>     
+</nav>
+<div class="container" >
+  <router-outlet (activate)="checkLoggedInUser"></router-outlet>
+</div>
